@@ -1,20 +1,21 @@
 package com.ruho.rsk.domain;
 
+import com.google.gson.annotations.SerializedName;
+import com.ruho.rsk.utils.NumberParser;
+
 import java.beans.Transient;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
-import com.ruho.rsk.utils.NumberParser;
 
 public class RskItem  implements Serializable {
 
     private static final long serialVersionUID = -6524986028707016895L;
 
     @SerializedName("block_signed_at")
-    private String blockSignedAt;
+    private Date blockSignedAt;
 
     @SerializedName("block_height")
     private Long blockHeight;
@@ -76,11 +77,11 @@ public class RskItem  implements Serializable {
         this.logEvents = logEvents;
     }
 
-    public String getBlockSignedAt() {
+    public Date getBlockSignedAt() {
         return blockSignedAt;
     }
 
-    public void setBlockSignedAt(final String blockSignedAt) {
+    public void setBlockSignedAt(final Date blockSignedAt) {
         this.blockSignedAt = blockSignedAt;
     }
 

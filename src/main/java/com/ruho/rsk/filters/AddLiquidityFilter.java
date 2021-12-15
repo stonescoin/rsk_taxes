@@ -1,9 +1,8 @@
 package com.ruho.rsk.filters;
 
-import com.ruho.rsk.domain.RskDecodedData;
 import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
-import com.ruho.rsk.filters.reports.RemoveLiquidityReport;
+import com.ruho.rsk.filters.reports.AddLiquidityReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.ContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
@@ -16,19 +15,18 @@ import java.util.List;
 
 import static com.ruho.rsk.steps.StepsFilter.*;
 
-public class RemoveLiquidityFilter implements AnyFilter {
-    @Override
-    public RemoveLiquidityReport generateReport(RskItem transaction) {
+public class AddLiquidityFilter implements AnyFilter {
+    public AddLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);
         return ContractSpecs.findSpecsFromContract(contractAddress)
                 .map(contractSpecs -> {
                     BigDecimal baseAmount = getTransferAmount(transaction,  contractSpecs.getBaseSymbol());
                     BigDecimal quoteAmount = getTransferAmount(transaction,  contractSpecs.getQuoteSymbol());
-                    return new RemoveLiquidityReport()
+
+                    return new AddLiquidityReport()
                             .setTransactionHash(transaction.getTransactionHash())
                             .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                             .setFees(transaction.getTotalFees())
-                            .setSovsRewards(findRewardsAmount(transaction))
                             .setBaseSymbol(contractSpecs.getBaseSymbol())
                             .setBaseAmount(baseAmount)
                             .setQuotedSymbol(contractSpecs.getQuoteSymbol())
@@ -46,35 +44,22 @@ public class RemoveLiquidityFilter implements AnyFilter {
     }
 
     private RskLogEvent findTransferEventBySymbol(RskItem transaction, String symbol) {
-        return findTransferEvents(transaction, symbol).stream()
-                .filter(logEvent -> logEvent.getSenderContract_ticker_symbol().contains(symbol))
+        List<RskLogEvent> transferEvents = findTransferEvents(transaction, symbol);
+        Collections.reverse(transferEvents);
+        return transferEvents.stream()
                 .findFirst()
                 .orElseThrow(() -> new IllegalStateException("can't find transferEvent by " + symbol + " for " + transaction.getTransactionHash()));
     }
 
     private String findContractAddress(RskItem transaction) {
-        RskLogEvent withdrawEvent = findWithdrawEvent(transaction);
-        return String.valueOf(findFirstParam(withdrawEvent, "recipient")
-                .map(RskDecodedData.Params::getValue)
-                .orElseThrow(() -> new IllegalStateException("recipient param not found for " + withdrawEvent.getTransactionHash() + "_" + withdrawEvent.getLogOffset())));
+        RskLogEvent issuanceEvent = findIssuanceEvent(transaction);
+        return issuanceEvent.getSenderAddress();
     }
-
-    private BigDecimal findRewardsAmount(RskItem transaction) {
-        List<RskLogEvent> transferEvents = findTransferEvents(transaction, "SOV");
-        Collections.reverse(transferEvents);
-        RskLogEvent rewardsEvent = transferEvents.stream().findFirst()
-                .orElseThrow(() -> new IllegalStateException("can't find Transfer rewards event"));
-        return findFirstParam(rewardsEvent, "value")
-                .map(RskDecodedData.Params::getValue)
-                .map(number -> NumberParser.numberFrom(number, rewardsEvent.getSenderContractDecimals()))
-                .orElseThrow(() -> new IllegalStateException("value param not found for hash: " + rewardsEvent.getTransactionHash() + " offset: " + rewardsEvent.getLogOffset()));
-    }
-
 
     @Override
     public boolean isTransactionInteresting(RskItem transaction) {
         return transaction.getLogEvents().stream()
-                .anyMatch(StepsFilter::isRemoveLiquidity);
+                .anyMatch(StepsFilter::isAddLiquidity);
     }
 
 
