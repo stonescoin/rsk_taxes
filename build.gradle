@@ -17,11 +17,16 @@ application {
 	mainClass = 'com.ruho.rsk.RskTaxesApplication'
 }
 
+run {
+	args project.property("com.rsk.wallet"), project.property("com.rsk.apiKey")
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.1'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
 
 test {
 	useJUnitPlatform()

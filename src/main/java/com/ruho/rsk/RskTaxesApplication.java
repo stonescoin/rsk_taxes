@@ -23,10 +23,14 @@ public class RskTaxesApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("starting");
 		RskDto rskDto;
-		if(args.length > 0 && args[0].equals("classpath")) {
+		if(args.length == 1 && args[0].equals("--classpath")) {
 			rskDto = fromClasspath();
 		} else {
-			rskDto = this.transactionsFetcherService.fetchTransactions();
+			if(args.length != 2) {
+				System.out.println("please run it with --classpath or with <wallet_addr> <apiKey>");
+				System.exit(1);
+			}
+			rskDto = this.transactionsFetcherService.fetchTransactions(args[0], args[1]);
 		}
 		new TransactionsParser().parse(rskDto).forEach(report -> {
 			System.out.println(report);
