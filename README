@@ -6,7 +6,7 @@ com.rsk.wallet=<your rsk wallet address>
 The api key should look like: ckey_XXXXXXXXXXXXXXX, get it by registering yourself in https://www.covalenthq.com
 the second one your wallet address starting with 0x
 
-2) go in the cmd line to this directory and run ./gradlew run
+2) go in the cmd line to this directory and run ./gradlew :run
 
     note: if you are developing locally I suggest you run instead: ./gradlew run --args=--classpath so that we are not querying covalenthq API every time,
     instead, the file src/main/resources/rsk.json will be used.
