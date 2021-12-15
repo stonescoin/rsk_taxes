@@ -1,55 +1,55 @@
 package com.ruho.rsk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
 
 public class RskLogEvent implements Serializable {
 
     private static final long serialVersionUID = -1180550712903615406L;
 
-    @SerializedName("block_signed_at")
+    @JsonProperty("block_signed_at")
     private String blockSignedAt;
 
-    @SerializedName("block_height")
+    @JsonProperty("block_height")
     private Long blockHeight;
 
-    @SerializedName("tx_offset")
+    @JsonProperty("tx_offset")
     private Long transactionOffset;
 
-    @SerializedName("log_offset")
+    @JsonProperty("log_offset")
     private Long logOffset;
 
-    @SerializedName("tx_hash")
+    @JsonProperty("tx_hash")
     private String transactionHash;
 
-    @SerializedName("_raw_log_topics_bytes")
+    @JsonProperty("_raw_log_topics_bytes")
     private String rawLogTopicsBytes;
 
-    @SerializedName("raw_log_topics")
+    @JsonProperty("raw_log_topics")
     private List<String> rawLogTopics;
 
-    @SerializedName("sender_contract_decimals")
+    @JsonProperty("sender_contract_decimals")
     private Integer senderContractDecimals;
 
-    @SerializedName("sender_name")
+    @JsonProperty("sender_name")
     private String senderName;
 
-    @SerializedName("sender_contract_ticker_symbol")
+    @JsonProperty("sender_contract_ticker_symbol")
     private String senderContract_ticker_symbol;
 
-    @SerializedName("sender_address")
+    @JsonProperty("sender_address")
     private String senderAddress;
 
-    @SerializedName("sender_address_label")
+    @JsonProperty("sender_address_label")
     private String senderAddressLabel;
 
-    @SerializedName("sender_logo_url")
+    @JsonProperty("sender_logo_url")
     private String senderLogoUrl;
 
-    @SerializedName("raw_log_data")
+    @JsonProperty("raw_log_data")
     private String rawLogData;
 
     private RskDecodedData decoded;

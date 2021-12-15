@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.ruho'
@@ -12,9 +13,13 @@ repositories {
 	mavenCentral()
 }
 
+application {
+	mainClass = 'com.ruho.rsk.RskTaxesApplication'
+}
+
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.1'
 	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation 'com.google.code.gson:gson:2.8.9'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

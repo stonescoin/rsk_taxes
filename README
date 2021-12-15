@@ -1,0 +1,11 @@
+1) go to src/resources/application.properties and fill up the 2 missing properties there
+
+covalenthq.basicAuth -> api key that you should get when you register in https://www.covalenthq.com, it should look like: ckey_99eaf69c7acd497dad513ab94d8
+rsk.wallet.address -> the RSK wallet address that you want to scan
+
+2) go in the cmd line to this directory and run ./gradlew run
+
+    note: if you are developing locally I suggest you run instead: ./gradlew run --args=classpath so that we are not querying covalenthq API every time,
+    instead, the file src/main/resources/rsk.json will be used.
+
+

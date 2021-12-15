@@ -1,71 +1,72 @@
 package com.ruho.rsk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ruho.rsk.utils.NumberParser;
+
 import java.beans.Transient;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
-import com.ruho.rsk.utils.NumberParser;
 
 public class RskItem  implements Serializable {
 
     private static final long serialVersionUID = -6524986028707016895L;
 
-    @SerializedName("block_signed_at")
-    private String blockSignedAt;
+    @JsonProperty("block_signed_at")
+    private Date blockSignedAt;
 
-    @SerializedName("block_height")
+    @JsonProperty("block_height")
     private Long blockHeight;
 
-    @SerializedName("tx_hash")
+    @JsonProperty("tx_hash")
     private String transactionHash;
 
-    @SerializedName("tx_offset")
+    @JsonProperty("tx_offset")
     private Long transactionOffset;
 
     private Boolean successful;
 
-    @SerializedName("from_address")
+    @JsonProperty("from_address")
     private String fromAddress;
 
-    @SerializedName("from_address_label")
+    @JsonProperty("from_address_label")
     private String fromAddressLabel;
 
-    @SerializedName("to_address")
+    @JsonProperty("to_address")
     private String toAddress;
 
-    @SerializedName("to_address_label")
+    @JsonProperty("to_address_label")
     private String toAddressLabel;
 
     private String value;
 
     //BigDecimal?
-    @SerializedName("value_quote")
+    @JsonProperty("value_quote")
     private String valueQuote;
 
     // BigDecimal
-    @SerializedName("gas_offered")
+    @JsonProperty("gas_offered")
     private String gasOffered;
 
     // BigDecimal
-    @SerializedName("gas_spent")
+    @JsonProperty("gas_spent")
     private String gasSpent;
 
     // BigDecimal
-    @SerializedName("gas_price")
+    @JsonProperty("gas_price")
     private String gasPrice;
 
     // BigDecimal
-    @SerializedName("gas_quote")
+    @JsonProperty("gas_quote")
     private String gasQuote;
 
     // BigDecimal
-    @SerializedName("gas_quote_rate")
+    @JsonProperty("gas_quote_rate")
     private String gasQuoteRate;
 
-    @SerializedName("log_events")
+    @JsonProperty("log_events")
     private List<RskLogEvent> logEvents;
 
     public List<RskLogEvent> getLogEvents() {
@@ -76,11 +77,11 @@ public class RskItem  implements Serializable {
         this.logEvents = logEvents;
     }
 
-    public String getBlockSignedAt() {
+    public Date getBlockSignedAt() {
         return blockSignedAt;
     }
 
-    public void setBlockSignedAt(final String blockSignedAt) {
+    public void setBlockSignedAt(final Date blockSignedAt) {
         this.blockSignedAt = blockSignedAt;
     }
 
