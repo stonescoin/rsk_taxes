@@ -4,19 +4,25 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.ruho.rsk.domain.*;
+import com.ruho.rsk.filters.AddLiquidityFilter;
+import com.ruho.rsk.filters.AnyFilter;
 import com.ruho.rsk.filters.RemoveLiquidityFilter;
-import com.ruho.rsk.filters.RemoveLiquidityReport;
+import com.ruho.rsk.filters.reports.AnyReport;
+import com.ruho.rsk.filters.reports.RemoveLiquidityReport;
 
 public class TestParser {
 
-    private static final Type type = new TypeToken<List<RskValueObject>>(){}.getType();
     private static final Gson gson = new Gson();
+
+    private final AnyFilter[] allFilters = new AnyFilter[]{
+            new RemoveLiquidityFilter(),
+            new AddLiquidityFilter()
+    };
 
     public static void main(String[] args) {
         TestParser tp = new TestParser();
@@ -32,18 +38,20 @@ public class TestParser {
 
             RskDto dto = gson.fromJson(reader, RskDto.class);
 
-            RemoveLiquidityFilter removeLiquidityFilter = new RemoveLiquidityFilter();
-
             for (RskItem transaction : dto.getData().getItems()) {
-                if(removeLiquidityFilter.isTransactionInteresting(transaction)) {
-                    try {
-                        RemoveLiquidityReport removeLiquidityReport = removeLiquidityFilter.generateReport(transaction);
-                        System.out.println(removeLiquidityReport);
-                        System.out.println("------------------");
-                    } catch (Exception e) {
-                        System.err.println(e.getMessage());
+                AnyReport report;
+                    for (AnyFilter filter : allFilters) {
+                        try {
+                            if(filter.isTransactionInteresting(transaction)) {
+                                report = filter.generateReport(transaction);
+                                System.out.println(report);
+                                System.out.println("------------------");
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace(System.err);
+                            System.err.println(e.getMessage());
+                        }
                     }
-                }
             }
         } catch (IOException e) {
             e.printStackTrace();

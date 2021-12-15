@@ -1,8 +1,12 @@
-package com.ruho.rsk.filters;
+package com.ruho.rsk.filters.reports;
+
+import com.ruho.rsk.filters.TransactionType;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
-public class RemoveLiquidityReport {
+public class RemoveLiquidityReport implements AnyReport {
+
     private BigDecimal sovsRewards;
 
     private String transactionHash;
@@ -14,6 +18,17 @@ public class RemoveLiquidityReport {
     private BigDecimal baseAmount;
 
     private BigDecimal fees;    //always in BTC
+
+    private LocalDateTime time;
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public RemoveLiquidityReport setTime(LocalDateTime time) {
+        this.time = time;
+        return this;
+    }
 
     public BigDecimal getSovsRewards() {
         return sovsRewards;
@@ -78,6 +93,10 @@ public class RemoveLiquidityReport {
         return this;
     }
 
+    @Override
+    public TransactionType getTransactionType() {
+        return TransactionType.LIQUIDITY_REMOVE;
+    }
 
     @Override
     public String toString() {
