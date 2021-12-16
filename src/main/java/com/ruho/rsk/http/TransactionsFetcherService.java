@@ -41,7 +41,7 @@ public class TransactionsFetcherService {
         }
     }
 
-    public RskDto fetchTransactions(String walletAddress, String apiKey) {
+    public RskDto fetchTransactions(String walletAddress, String apiKey, int pageNumber) {
         HttpHeaders headers = new HttpHeaders();
         String auth = apiKey + ":";
         byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.US_ASCII) );
@@ -52,6 +52,7 @@ public class TransactionsFetcherService {
         uriBuilder.scheme("https")
                 .host(this.baseUrl)
                 .path("/v1/30/address/" + walletAddress + "/transactions_v2/")
+                .queryParam("page-number", pageNumber)
                 .build();
 
         ResponseEntity<RskDto> response = restTemplate.exchange(uriBuilder.toUriString(), HttpMethod.GET, request, RskDto.class);

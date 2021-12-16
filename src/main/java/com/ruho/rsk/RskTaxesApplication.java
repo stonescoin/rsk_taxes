@@ -21,27 +21,36 @@ public class RskTaxesApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		if (args.length != 2) {
+			System.out.println("please run it with \"<wallet_addr> --classpath\" or with \"<wallet_addr> <apiKey>\"");
+			System.exit(1);
+		}
+
 		System.out.println("starting");
 		RskDto rskDto;
-		if(args.length == 1 && args[0].equals("--classpath")) {
-			rskDto = fromClasspath();
-		} else {
-			if(args.length != 2) {
-				System.out.println("please run it with --classpath or with <wallet_addr> <apiKey>");
-				System.exit(1);
+		int pageNumber = 0;
+		String walletAddress = args[0];
+		String apiKey = args[1];
+		do {
+			if (apiKey.equals("--classpath")) {
+				rskDto = fromClasspath(walletAddress, pageNumber);
+			} else {
+				rskDto = this.transactionsFetcherService.fetchTransactions(walletAddress, apiKey, pageNumber);
 			}
-			rskDto = this.transactionsFetcherService.fetchTransactions(args[0], args[1]);
-		}
-		new TransactionsParser().parse(rskDto).forEach(report -> {
-			System.out.println(report);
-			System.out.println("------------------");
-		});
+			new TransactionsParser().parse(rskDto).forEach(report -> {
+				System.out.println(report);
+				System.out.println("------------------");
+			});
+			pageNumber++;
+		} while(rskDto.getData().getPagination().getHasMore());
 		System.out.println("completed!");
 		System.exit(0);
 	}
 
-	private RskDto fromClasspath() throws IOException {
-		String filePath = Objects.requireNonNull(TransactionsParser.class.getClassLoader().getResource("rsk.json")).getFile();
+	private RskDto fromClasspath(String walletAddr, int pageNumber) throws IOException {
+		String filePath = Objects.requireNonNull(
+				TransactionsParser.class.getClassLoader().getResource(String.format("transactions/%s-%s.json", walletAddr, pageNumber))
+		).getFile();
 		return this.transactionsFetcherService.fetchTransactions(filePath);
 	}
 }
