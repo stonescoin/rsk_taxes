@@ -2,5 +2,6 @@ package com.ruho.rsk.filters;
 
 public enum TransactionType {
     LIQUIDITY_ADD,
-    LIQUIDITY_REMOVE
+    LIQUIDITY_REMOVE,
+    SPOT_SWAP,
 }

@@ -41,7 +41,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
     private BigDecimal getTransferAmount(RskItem transaction, String symbol) {
         RskLogEvent transferEvent = findTransferEventBySymbol(transaction, symbol);
         return findFirstParam(transferEvent, "value")
-                .map(params -> NumberParser.numberFrom(params.getValue(), transferEvent.getSenderContractDecimals()))
+                .map(param -> NumberParser.numberFrom(param.getValue(), transferEvent.getSenderContractDecimals()))
                 .orElseThrow(() -> new IllegalStateException("can't find value param in baseTransfer for " + transaction.getTransactionHash()));
     }
 
@@ -55,7 +55,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
     private String findContractAddress(RskItem transaction) {
         RskLogEvent withdrawEvent = findWithdrawEvent(transaction);
         return String.valueOf(findFirstParam(withdrawEvent, "recipient")
-                .map(RskDecodedData.Params::getValue)
+                .map(RskDecodedData.Param::getValue)
                 .orElseThrow(() -> new IllegalStateException("recipient param not found for " + withdrawEvent.getTransactionHash() + "_" + withdrawEvent.getLogOffset())));
     }
 
@@ -65,7 +65,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
         RskLogEvent rewardsEvent = transferEvents.stream().findFirst()
                 .orElseThrow(() -> new IllegalStateException("can't find Transfer rewards event"));
         return findFirstParam(rewardsEvent, "value")
-                .map(RskDecodedData.Params::getValue)
+                .map(RskDecodedData.Param::getValue)
                 .map(number -> NumberParser.numberFrom(number, rewardsEvent.getSenderContractDecimals()))
                 .orElseThrow(() -> new IllegalStateException("value param not found for hash: " + rewardsEvent.getTransactionHash() + " offset: " + rewardsEvent.getLogOffset()));
     }

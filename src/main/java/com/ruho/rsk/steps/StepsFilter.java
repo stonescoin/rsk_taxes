@@ -64,13 +64,18 @@ public class StepsFilter {
                 .orElseThrow(() -> new IllegalStateException("no " + name + " event found for " + transaction.getTransactionHash()));
     }
 
-    public static Optional<RskDecodedData.Params> findFirstParam(RskLogEvent event, String paramName) {
+    public static Optional<RskDecodedData.Param> findFirstParam(RskLogEvent event, String paramName) {
         if(event.getDecoded() == null || event.getDecoded().getParams() == null) {
             return Optional.empty();
         } else {
             return event.getDecoded().getParams().stream()
-                    .filter(params -> params.getName().equals(paramName))
+                    .filter(param -> param.getName().equals(paramName))
                     .findFirst();
         }
     }
+
+    public static boolean isSpotSwap(RskLogEvent logEvent) {
+        return isLogEventNamed(logEvent, SPOT_SWAP);
+    }
+
 }

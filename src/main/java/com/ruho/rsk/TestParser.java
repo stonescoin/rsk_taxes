@@ -12,6 +12,7 @@ import com.ruho.rsk.domain.*;
 import com.ruho.rsk.filters.AddLiquidityFilter;
 import com.ruho.rsk.filters.AnyFilter;
 import com.ruho.rsk.filters.RemoveLiquidityFilter;
+import com.ruho.rsk.filters.SpotSwapFilter;
 import com.ruho.rsk.filters.reports.AnyReport;
 import com.ruho.rsk.filters.reports.RemoveLiquidityReport;
 
@@ -21,7 +22,8 @@ public class TestParser {
 
     private final AnyFilter[] allFilters = new AnyFilter[]{
             new RemoveLiquidityFilter(),
-            new AddLiquidityFilter()
+            new AddLiquidityFilter(),
+            new SpotSwapFilter()
     };
 
     public static void main(String[] args) {

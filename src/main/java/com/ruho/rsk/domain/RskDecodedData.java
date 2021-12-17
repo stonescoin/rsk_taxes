@@ -9,9 +9,9 @@ public class RskDecodedData implements Serializable {
 
     private String name;
     private String signature;
-    private List<Params> params;
+    private List<Param> params;
 
-    public static class Params {
+    public static class Param {
         String name;
         String type;
         Boolean indexed;
@@ -47,7 +47,7 @@ public class RskDecodedData implements Serializable {
         return signature;
     }
 
-    public List<Params> getParams() {
+    public List<Param> getParams() {
         return params;
     }
 }

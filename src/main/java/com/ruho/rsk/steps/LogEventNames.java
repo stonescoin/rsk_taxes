@@ -7,4 +7,6 @@ public class LogEventNames {
     public static final String WITHDRAW = "Withdraw";
     public static final String ISSUANCE = "Issuance";
     public static final String TRANSFER = "Transfer";
+    public static final String SPOT_SWAP = "TokenConverted";
+    public static final String WITHDRAWAL = "Withdrawal";
 }
