@@ -1,24 +1,24 @@
 package com.ruho.rsk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
 
 public class RskPaginationData implements Serializable {
 
     private static final long serialVersionUID = 4858398693222871441L;
 
-    @SerializedName("has_more")
+    @JsonProperty("has_more")
     private Boolean hasMore;
 
-    @SerializedName("page_number")
+    @JsonProperty("page_number")
     private Long pageNumber;
 
-    @SerializedName("page_size")
+    @JsonProperty("page_size")
     private Long pageSize;
 
-    @SerializedName("total_count")
+    @JsonProperty("total_count")
     private Long totalCount;
 
     public Boolean getHasMore() {

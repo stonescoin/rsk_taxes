@@ -4,10 +4,11 @@ import java.util.Arrays;
 import java.util.Optional;
 
 public enum ContractSpecs {
-    BTC_XUSD_POOL("0x6f96096687952349dd5944e0eb1be327dcdeb705", "BTC", "XUSD", true),
-    BTC_ETH_POOL("0xf41ed702df2b84ace02772c6a0d8ae46465aa5f4", "BTC", "ETH", true),
-    BTC_BNB_POOL("0x8f3d24ab3510294f1466aa105f78901b90d79d4d", "BTC", "BNB", true),
-    BTC_SOV_POOL("0x09c5faf7723b13434abdf1a65ab1b667bc02a902", "BTC", "SOV", true),
+    BTC_XUSD_POOL("0x6f96096687952349dd5944e0eb1be327dcdeb705", "BTC", "XUSD"),
+    BTC_ETH_POOL("0xf41ed702df2b84ace02772c6a0d8ae46465aa5f4", "BTC", "ETH"),
+    BTC_BNB_POOL("0x8f3d24ab3510294f1466aa105f78901b90d79d4d", "BTC", "BNB");
+    BTC_SOV_POOL("0x09c5faf7723b13434abdf1a65ab1b667bc02a902", "BTC", "SOV"),
+    BTC_FISH_POOL("0x35a74a38fd7728f1c6bc39ae3b18c974b7979ddd", "BTC", "FISH");
     SOV("0xefc78fc7d48b64958315949279ba181c2114abbd", "SOV", "SOV", false),
     BTC("0x542fda317318ebf1d3deaf76e0b632741a7e677d", "BTC", "BTC", false),
     USD("0xb5999795be0ebb5bab23144aa5fd6a02d080299f", "USD", "USD", false),

@@ -1,9 +1,9 @@
 package com.ruho.rsk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
 
 public class RskDto implements Serializable {
 
@@ -12,10 +12,10 @@ public class RskDto implements Serializable {
     private RskData data;
     private boolean error;
 
-    @SerializedName("error_message")
+    @JsonProperty("error_message")
     private String errorMessage;
 
-    @SerializedName("error_code")
+    @JsonProperty("error_code")
     private String errorCode;
 
     public RskData getData() {

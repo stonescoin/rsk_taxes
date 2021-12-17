@@ -1,10 +1,10 @@
 package com.ruho.rsk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
-
-import com.google.gson.annotations.SerializedName;
 
 public class RskData implements Serializable {
 
@@ -12,16 +12,16 @@ public class RskData implements Serializable {
 
     private String address;
 
-    @SerializedName("updated_at")
+    @JsonProperty("updated_at")
     private String updatedAt;
 
-    @SerializedName("next_update_at")
+    @JsonProperty("next_update_at")
     private String nextUpdateAt;
 
-    @SerializedName("quote_currency")
+    @JsonProperty("quote_currency")
     private String quoteCurrency;
 
-    @SerializedName("chain_id")
+    @JsonProperty("chain_id")
     private Integer chainId;
 
     private RskPaginationData pagination;

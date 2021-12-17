@@ -65,7 +65,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
         RskLogEvent rewardsEvent = transferEvents.stream().findFirst()
                 .orElseThrow(() -> new IllegalStateException("can't find Transfer rewards event"));
         return findFirstParam(rewardsEvent, "value")
-                .map(RskDecodedData.Param::getValue)
+                .map(RskDecodedData.Params::getValue)
                 .map(number -> NumberParser.numberFrom(number, rewardsEvent.getSenderContractDecimals()))
                 .orElseThrow(() -> new IllegalStateException("value param not found for hash: " + rewardsEvent.getTransactionHash() + " offset: " + rewardsEvent.getLogOffset()));
     }
@@ -73,6 +73,9 @@ public class RemoveLiquidityFilter implements AnyFilter {
 
     @Override
     public boolean isTransactionInteresting(RskItem transaction) {
+        if(transaction.getLogEvents() == null) {
+            return false;
+        }
         return transaction.getLogEvents().stream()
                 .anyMatch(StepsFilter::isRemoveLiquidity);
     }

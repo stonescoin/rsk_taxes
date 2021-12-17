@@ -58,6 +58,9 @@ public class AddLiquidityFilter implements AnyFilter {
 
     @Override
     public boolean isTransactionInteresting(RskItem transaction) {
+        if(transaction.getLogEvents() == null) {
+            return false;
+        }
         return transaction.getLogEvents().stream()
                 .anyMatch(StepsFilter::isAddLiquidity);
     }

@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'application'
 }
 
 group = 'com.ruho'
@@ -12,14 +13,22 @@ repositories {
 	mavenCentral()
 }
 
+application {
+	mainClass = 'com.ruho.rsk.RskTaxesApplication'
+}
+
+run {
+	args project.property("com.rsk.wallet"), project.property("com.rsk.apiKey")
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.1'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'com.google.code.gson:gson:2.8.9'
 	implementation 'com.google.guava:guava:31.0.1-jre'
-
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
 
 test {
 	useJUnitPlatform()

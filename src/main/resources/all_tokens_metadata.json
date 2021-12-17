@@ -1,0 +1,1116 @@
+{
+  "data": {
+    "updated_at": "2021-12-16T14:27:01.043487790Z",
+    "items": [
+      {
+        "contract_decimals": 18,
+        "contract_name": "DAIbs",
+        "contract_ticker_symbol": "DAIbs",
+        "contract_address": "0x6a42ff12215a90f50866a5ce43a9c9c870116e76",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6a42ff12215a90f50866a5ce43a9c9c870116e76.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "RSK Smart XCP",
+        "contract_ticker_symbol": "RXCP",
+        "contract_address": "0xa511ec4390350b6817ca9122df8bd8297ea532f0",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xa511ec4390350b6817ca9122df8bd8297ea532f0.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Jaggery",
+        "contract_ticker_symbol": "JAGGERY",
+        "contract_address": "0xabcb592ff9cc1b4258913ca96b58ef782dd01eb6",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xabcb592ff9cc1b4258913ca96b58ef782dd01eb6.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 8,
+        "contract_name": "rLending RBTC",
+        "contract_ticker_symbol": "cRBTC",
+        "contract_address": "0x872664a885a1995d754e3666a23fad5c801401c4",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x872664a885a1995d754e3666a23fad5c801401c4.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Sovryn Mynt",
+        "contract_ticker_symbol": "MYNT",
+        "contract_address": "0x2e6b1d146064613e8f521eb3c6e65070af964ebb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2e6b1d146064613e8f521eb3c6e65070af964ebb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 0,
+        "contract_name": "CryptoKitties",
+        "contract_ticker_symbol": "CK",
+        "contract_address": "0xfd4ca0ade5faa7f5371c3513fe719d4ea645633a",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xfd4ca0ade5faa7f5371c3513fe719d4ea645633a.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x561df935ce4947e25f320adfc218b7f0cb925613",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x561df935ce4947e25f320adfc218b7f0cb925613.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Liquid Token",
+        "contract_ticker_symbol": "LQT",
+        "contract_address": "0xb5387b62caf7d7ad04e8b607d19fb8b0cd608bda",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xb5387b62caf7d7ad04e8b607d19fb8b0cd608bda.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "BDXShares",
+        "contract_ticker_symbol": "BDX",
+        "contract_address": "0xe220e51faaf20fdc8f4d4773bfaf014e903e5786",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xe220e51faaf20fdc8f4d4773bfaf014e903e5786.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x21c4133fb001ec78981080b57582e296325a5a44",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x21c4133fb001ec78981080b57582e296325a5a44.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "UNISWAP ETH-USDT",
+        "contract_ticker_symbol": "UNIET1",
+        "contract_address": "0x0e0bb6aad368ff6c26c689d9a19b07b2ac760348",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x0e0bb6aad368ff6c26c689d9a19b07b2ac760348.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x1e590f4695bb4620ebfda0c811e2d5b282191ac5",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x1e590f4695bb4620ebfda0c811e2d5b282191ac5.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "BNBs",
+        "contract_ticker_symbol": "BNBs",
+        "contract_address": "0x6d9659bdf5b1a1da217f7bbaf7dbaf8190e2e71b",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6d9659bdf5b1a1da217f7bbaf7dbaf8190e2e71b.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rLending",
+        "contract_ticker_symbol": "rLEN",
+        "contract_address": "0x4f6b4d3af154d5f1ce200b97051a39b77e99f1f9",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x4f6b4d3af154d5f1ce200b97051a39b77e99f1f9.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "iBPro",
+        "contract_ticker_symbol": "iBPro",
+        "contract_address": "0x6e2fb26a60da535732f8149b25018c9c0823a715",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6e2fb26a60da535732f8149b25018c9c0823a715.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Dumpcoin",
+        "contract_ticker_symbol": "DUMP",
+        "contract_address": "0x734583801c6c020220aab0774d69900f1d094833",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x734583801c6c020220aab0774d69900f1d094833.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 2,
+        "contract_name": "Kwarantanna z Bitcoinem",
+        "contract_ticker_symbol": "KzB",
+        "contract_address": "0x5705429252ea6f1a98a2e168bbfa3ec6eaeb904f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x5705429252ea6f1a98a2e168bbfa3ec6eaeb904f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x98e7a0424dfdf19f79494543b48e7de792b2dd4f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x98e7a0424dfdf19f79494543b48e7de792b2dd4f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x7201c63bc4e0462bb7c3e13dae8ca5f5c34808bb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x7201c63bc4e0462bb7c3e13dae8ca5f5c34808bb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x818c0a92aae155e93419b5a7323e8e8ae649f287",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x818c0a92aae155e93419b5a7323e8e8ae649f287.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "RIF Dollar on Chain",
+        "contract_ticker_symbol": "RDOC",
+        "contract_address": "0x2d919f19d4892381d58edebeca66d5642cef1a1f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2d919f19d4892381d58edebeca66d5642cef1a1f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "MockERC20",
+        "contract_ticker_symbol": "MOCK",
+        "contract_address": "0x200f2d316b8fb721eb0908908a72b47d182686f9",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x200f2d316b8fb721eb0908908a72b47d182686f9.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Dumpcoin",
+        "contract_ticker_symbol": "DUMP",
+        "contract_address": "0x2ee2c99a54f2acd85386f5138bc817ac7a4e949a",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2ee2c99a54f2acd85386f5138bc817ac7a4e949a.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "UNISWAP ETH-USDT III",
+        "contract_ticker_symbol": "UNIET3",
+        "contract_address": "0xd38c33e55b8e065276f5e949cf21c580eb91fe53",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd38c33e55b8e065276f5e949cf21c580eb91fe53.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "RifPRO",
+        "contract_ticker_symbol": "RIFP",
+        "contract_address": "0xf89706f1a58304745b7cfa760d4498dc65ea482f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xf89706f1a58304745b7cfa760d4498dc65ea482f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 0,
+        "contract_name": null,
+        "contract_ticker_symbol": null,
+        "contract_address": "0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x45d3e4fb311982a06ba52359d44cb4f5980e0ef1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rUSDC",
+        "contract_ticker_symbol": "rUSDC",
+        "contract_address": "0x5a42221d7aae8e185bc0054bb036d9757ec18857",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x5a42221d7aae8e185bc0054bb036d9757ec18857.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Invecoin",
+        "contract_ticker_symbol": "INV",
+        "contract_address": "0xd9d278a677b5e76108218c838ce39b276872d838",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd9d278a677b5e76108218c838ce39b276872d838.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xdc133776c7d6bd918ea0d171d3f8fd0a055d8379",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xdc133776c7d6bd918ea0d171d3f8fd0a055d8379.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "REGGIO XXXI",
+        "contract_ticker_symbol": "REG031",
+        "contract_address": "0x3ec1f27a5505bb8afb9117d6ae93819599f413cc",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x3ec1f27a5505bb8afb9117d6ae93819599f413cc.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "USDCbs",
+        "contract_ticker_symbol": "USDCbs",
+        "contract_address": "0x91edcee9567cd5612c9dedeaae24d5e574820af1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x91edcee9567cd5612c9dedeaae24d5e574820af1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "UNISWAP ETH-USDT II",
+        "contract_ticker_symbol": "UNIET2",
+        "contract_address": "0xb116ed583112010f8c83af0d28b9f7eba5687ea3",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xb116ed583112010f8c83af0d28b9f7eba5687ea3.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "a sdfasdf ",
+        "contract_ticker_symbol": "asdf",
+        "contract_address": "0xcf30a3b0c3d93acb020c644c71d337b903ad816b",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xcf30a3b0c3d93acb020c644c71d337b903ad816b.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Blindex Swap",
+        "contract_ticker_symbol": "BDSWAP",
+        "contract_address": "0xc4e30d9e0466351e0f627a3edbdecdb3e9d2b87e",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc4e30d9e0466351e0f627a3edbdecdb3e9d2b87e.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Sovryn Token",
+        "contract_ticker_symbol": "SOV",
+        "contract_address": "0xefc78fc7d48b64958315949279ba181c2114abbd",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xefc78fc7d48b64958315949279ba181c2114abbd.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "UNISWAP ETH-USDC IV",
+        "contract_ticker_symbol": "UNIEC4",
+        "contract_address": "0x37fce5d4904aaef86fccbe892f35b049041bf3a0",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x37fce5d4904aaef86fccbe892f35b049041bf3a0.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x51d13790253483151aef2c00453be2951cf69eb1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x51d13790253483151aef2c00453be2951cf69eb1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "(WR)BTC/USDT Liquidity Pool1",
+        "contract_ticker_symbol": "(WR)BTC/USDT1",
+        "contract_address": "0x9c4017d1c04cfa0f97fdc9505e33a0d8ac84817f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x9c4017d1c04cfa0f97fdc9505e33a0d8ac84817f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x2d5146c744bef25b27d0dc8523ed547bf7514d84",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2d5146c744bef25b27d0dc8523ed547bf7514d84.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xc9fe8e7a47eff9f62f2684a540619d52fbcd6649",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc9fe8e7a47eff9f62f2684a540619d52fbcd6649.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Pesos Bolivianos",
+        "contract_ticker_symbol": "BOBCB",
+        "contract_address": "0x977675b863b3b1cf46a927fddcbe0c831bf50135",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x977675b863b3b1cf46a927fddcbe0c831bf50135.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "REGGIO XXX",
+        "contract_ticker_symbol": "REG030",
+        "contract_address": "0xc21b9664dcf9f475bba9b43f92c1539136ac9514",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc21b9664dcf9f475bba9b43f92c1539136ac9514.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "BlindexEuro",
+        "contract_ticker_symbol": "BDEU",
+        "contract_address": "0x0972a73c94fe6b96def5dfeb24951921cf2afa55",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x0972a73c94fe6b96def5dfeb24951921cf2afa55.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rUBI",
+        "contract_ticker_symbol": "rUBI",
+        "contract_address": "0x70566d8541beabe984c8babf8a816ed908514ba8",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x70566d8541beabe984c8babf8a816ed908514ba8.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "OPORTUNIDAD EN FUTUROS DE ETHEREUM",
+        "contract_ticker_symbol": "OEF003",
+        "contract_address": "0xc9a07694a5b61a97ebf81288e7b5aa6d5b798dcb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc9a07694a5b61a97ebf81288e7b5aa6d5b798dcb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "(WR)BTC/USDT Liquidity Pool2",
+        "contract_ticker_symbol": "(WR)BTC/USDT2",
+        "contract_address": "0x40580e31cc14dbf7a0859f38ab36a84262df821d",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x40580e31cc14dbf7a0859f38ab36a84262df821d.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Blindex Swap",
+        "contract_ticker_symbol": "BDSWAP",
+        "contract_address": "0x175ed1b3711cf85752163111184a127b64ef0738",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x175ed1b3711cf85752163111184a127b64ef0738.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "SolarBeam LP Token",
+        "contract_ticker_symbol": "SLP",
+        "contract_address": "0x330b2b040222082962f2c41ba2137834f4114cec",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x330b2b040222082962f2c41ba2137834f4114cec.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rDAI",
+        "contract_ticker_symbol": "rDAI",
+        "contract_address": "0x6b1a73d547f4009a26b8485b63d7015d248ad406",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6b1a73d547f4009a26b8485b63d7015d248ad406.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xd3a101a3ae50b67e854391d5173da6d2e928114f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd3a101a3ae50b67e854391d5173da6d2e928114f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xa8aeba14c2f67c1e3c588e0279d9b4e5a64b3bef",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xa8aeba14c2f67c1e3c588e0279d9b4e5a64b3bef.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Pesos Colombianos",
+        "contract_ticker_symbol": "COPCB",
+        "contract_address": "0x7c459c5b11e2815db085dda9ec314a9cde00a082",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x7c459c5b11e2815db085dda9ec314a9cde00a082.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x90fc6fbb9c7ecfecf0acb44385e6a4d076817feb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x90fc6fbb9c7ecfecf0acb44385e6a4d076817feb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x2d9985d9d573ed4b504c939684b2b09fc902745f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2d9985d9d573ed4b504c939684b2b09fc902745f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rUSDT",
+        "contract_ticker_symbol": "rUSDT",
+        "contract_address": "0xe506f698b31a66049bd4653ed934e7a07cbc5549",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xe506f698b31a66049bd4653ed934e7a07cbc5549.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 0,
+        "contract_name": "SovrynNft",
+        "contract_ticker_symbol": "SOVNFT",
+        "contract_address": "0x576ae218aecfd4cbd2dbe07250b47e26060932b1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x576ae218aecfd4cbd2dbe07250b47e26060932b1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "BNBbs",
+        "contract_ticker_symbol": "BNBbs",
+        "contract_address": "0xd2a826b78200c8434b957913ce4067e6e3169385",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd2a826b78200c8434b957913ce4067e6e3169385.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "ibRIF",
+        "contract_ticker_symbol": "ibRIF",
+        "contract_address": "0x02f8480768fb9740489d6daf0395334494b4976d",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x02f8480768fb9740489d6daf0395334494b4976d.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rUSDC",
+        "contract_ticker_symbol": "rUSDC",
+        "contract_address": "0x1bda44fda023f2af8280a16fd1b01d1a493ba6c4",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x1bda44fda023f2af8280a16fd1b01d1a493ba6c4.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "BayCoin",
+        "contract_ticker_symbol": "BAY",
+        "contract_address": "0x5cbeb598a85b5e12de837e55fa2929cc7ec58a20",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x5cbeb598a85b5e12de837e55fa2929cc7ec58a20.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 0,
+        "contract_name": null,
+        "contract_ticker_symbol": null,
+        "contract_address": "0xd36ce8d6021a242e20de91f017b7ee020b4531c8",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd36ce8d6021a242e20de91f017b7ee020b4531c8.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "My Token",
+        "contract_ticker_symbol": "MT",
+        "contract_address": "0x215662db3cf2d7dcc8e8547a40c264381100a947",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x215662db3cf2d7dcc8e8547a40c264381100a947.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "sUSDrBTC Liquidity Pool2",
+        "contract_ticker_symbol": "sUSDrBTC2",
+        "contract_address": "0x2dc80332c19fbcd5169ab4a579d87ee006cb72c0",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2dc80332c19fbcd5169ab4a579d87ee006cb72c0.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xa067a2cbb402e4e72e28dcf4be0219be7a37ef30",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xa067a2cbb402e4e72e28dcf4be0219be7a37ef30.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "STEST",
+        "contract_ticker_symbol": "STST",
+        "contract_address": "0x16cb2604ce5951c8506fbf690d816be6d0aa00fb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x16cb2604ce5951c8506fbf690d816be6d0aa00fb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "REGGIO XXVIII",
+        "contract_ticker_symbol": "REG028",
+        "contract_address": "0x585a4f27b1729e2f97e2032df6d2dbd57cab13e1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x585a4f27b1729e2f97e2032df6d2dbd57cab13e1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 8,
+        "contract_name": "rLending RIF",
+        "contract_ticker_symbol": "cRIF",
+        "contract_address": "0xb7ff2c56c897562c0aa6747d2679d35f5e937492",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xb7ff2c56c897562c0aa6747d2679d35f5e937492.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 6,
+        "contract_name": "WataCoin",
+        "contract_ticker_symbol": "WTF",
+        "contract_address": "0x9527acbf096cefdbf17a652d785fcb67794c75b8",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x9527acbf096cefdbf17a652d785fcb67794c75b8.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "RIFPro",
+        "contract_ticker_symbol": "RIFP",
+        "contract_address": "0xf4d27c56595ed59b66cc7f03cff5193e4bd74a61",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xf4d27c56595ed59b66cc7f03cff5193e4bd74a61.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "3",
+        "contract_ticker_symbol": "3",
+        "contract_address": "0x317c5ea002dee83704207a022c942cdba29edb4b",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x317c5ea002dee83704207a022c942cdba29edb4b.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "OPORTUNIDAD EN FUTUROS DE ETHEREUM II",
+        "contract_ticker_symbol": "OEF004",
+        "contract_address": "0x6b83b3ad8cff38c7a5820c2910ad0a963be524a3",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6b83b3ad8cff38c7a5820c2910ad0a963be524a3.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "iSUSD",
+        "contract_ticker_symbol": "iSUSD",
+        "contract_address": "0xd8d25f03ebba94e15df2ed4d6d38276b595593c1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd8d25f03ebba94e15df2ed4d6d38276b595593c1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "rLINK",
+        "contract_ticker_symbol": "rLINK",
+        "contract_address": "0x14adae34bef7ca957ce2dde5add97ea050123827",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x14adae34bef7ca957ce2dde5add97ea050123827.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "UNISWAP ETH-UNI",
+        "contract_ticker_symbol": "UNIEU1",
+        "contract_address": "0xc455ad5fe9a6ecea3a50ee7bef569f4d4cd00e73",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc455ad5fe9a6ecea3a50ee7bef569f4d4cd00e73.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "REGGIO XXVII",
+        "contract_ticker_symbol": "REG027",
+        "contract_address": "0x17d32bf8306e0f841ae2a09439c4cdf97a7216de",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x17d32bf8306e0f841ae2a09439c4cdf97a7216de.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xf53b62e6537b86b4f5a3f95d29ba7334e2669cb1",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xf53b62e6537b86b4f5a3f95d29ba7334e2669cb1.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "(WR)BTC/BPRO Liquidity Pool1",
+        "contract_ticker_symbol": "(WR)BTC/BPRO1",
+        "contract_address": "0x75e327a83ad2bfd53da12eb718fccfc68bc57535",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x75e327a83ad2bfd53da12eb718fccfc68bc57535.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "REGGIO XXIX",
+        "contract_ticker_symbol": "REG029",
+        "contract_address": "0xaec91825525468ab7693d07bb25d46584cd84172",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xaec91825525468ab7693d07bb25d46584cd84172.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Ethereum",
+        "contract_ticker_symbol": "ETHCB",
+        "contract_address": "0x84c0cb1d6623cfb3546a79c66eb96b874ce6659d",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x84c0cb1d6623cfb3546a79c66eb96b874ce6659d.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "CoinFabrik",
+        "contract_ticker_symbol": "CF",
+        "contract_address": "0x6b58179529af2713f67da470b5861af712950fed",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6b58179529af2713f67da470b5861af712950fed.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "USDTbs",
+        "contract_ticker_symbol": "USDTbs",
+        "contract_address": "0xff4299bca0313c20a61dc5ed597739743bef3f6d",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xff4299bca0313c20a61dc5ed597739743bef3f6d.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "RIF",
+        "contract_ticker_symbol": "RIF",
+        "contract_address": "0x2acc95758f8b5f583470ba265eb685a8f45fc9d5",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x2acc95758f8b5f583470ba265eb685a8f45fc9d5.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "U.EXCHANGE LP Token",
+        "contract_ticker_symbol": "U.EXCHANGE LP",
+        "contract_address": "0xc3e5562c2b28bbc84fd49e166704116d39bb10d7",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xc3e5562c2b28bbc84fd49e166704116d39bb10d7.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "CSOVrynToken",
+        "contract_ticker_symbol": "CSOV",
+        "contract_address": "0x7f7dcf9df951c4a332740e9a125720da242a34ff",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x7f7dcf9df951c4a332740e9a125720da242a34ff.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0xdb565228067226d8073bba78d076ac8308f64b0c",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xdb565228067226d8073bba78d076ac8308f64b0c.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "IARS",
+        "contract_ticker_symbol": "IARS",
+        "contract_address": "0x790138203a3239d9ffd7227936eed7c11d0e0dcb",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x790138203a3239d9ffd7227936eed7c11d0e0dcb.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x0131fd31f5786f529e0a9dc17d256c2158d8239f",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x0131fd31f5786f529e0a9dc17d256c2158d8239f.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "iWRBTC",
+        "contract_ticker_symbol": "iWRBTC",
+        "contract_address": "0xa9dcdc63eabb8a2b6f39d7ff9429d88340044a7a",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xa9dcdc63eabb8a2b6f39d7ff9429d88340044a7a.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "IMPORTACION DE PRODUCTOS TERMICOS",
+        "contract_ticker_symbol": "BNY001",
+        "contract_address": "0xf9879972663f5170d6e191aa9552b364f1bdc957",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xf9879972663f5170d6e191aa9552b364f1bdc957.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "(WR)BTC/BPRO Liquidity Pool2",
+        "contract_ticker_symbol": "(WR)BTC/BPRO2",
+        "contract_address": "0x9ce25371426763025c04a9fcd581fbb9e4593475",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x9ce25371426763025c04a9fcd581fbb9e4593475.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Tropykus kRIF",
+        "contract_ticker_symbol": "kRIF",
+        "contract_address": "0xfc1b69d8c35e41526201629d4cd5fe04de63ad20",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xfc1b69d8c35e41526201629d4cd5fe04de63ad20.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "AAVE - DAI",
+        "contract_ticker_symbol": "AAVE002",
+        "contract_address": "0x8924f96470f49c8f69fd6e12d889fe3864d1e8db",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x8924f96470f49c8f69fd6e12d889fe3864d1e8db.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Blindex Swap",
+        "contract_ticker_symbol": "BDSWAP",
+        "contract_address": "0xf42aacc7db35bc4d884dfce1343efa2e4af330e8",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xf42aacc7db35bc4d884dfce1343efa2e4af330e8.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "ETHes",
+        "contract_ticker_symbol": "ETHes",
+        "contract_address": "0xfe878227c8f334038dab20a99fc3b373ffe0a755",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xfe878227c8f334038dab20a99fc3b373ffe0a755.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 2,
+        "contract_name": "US Dollar",
+        "contract_ticker_symbol": "USD",
+        "contract_address": "0x6f52b4e665f0e1990f1ef20e82fc7aeee3439a11",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x6f52b4e665f0e1990f1ef20e82fc7aeee3439a11.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Euro",
+        "contract_ticker_symbol": "EURCB",
+        "contract_address": "0xae2ceb4b57ade22643be2909425105d5114b1dbc",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xae2ceb4b57ade22643be2909425105d5114b1dbc.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Uniswap V2",
+        "contract_ticker_symbol": "UNI-V2",
+        "contract_address": "0x330223b10cbda7aabd1ef7b2062ee8578c8c4343",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x330223b10cbda7aabd1ef7b2062ee8578c8c4343.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Pesos Argentinos",
+        "contract_ticker_symbol": "IARS",
+        "contract_address": "0x7045c79b82f5b473f45786de8c4bd9431c353e91",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0x7045c79b82f5b473f45786de8c4bd9431c353e91.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 18,
+        "contract_name": "Invecoin",
+        "contract_ticker_symbol": "INV",
+        "contract_address": "0xd355536605b5d9273c3b5f515dd29b34f5bc844e",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xd355536605b5d9273c3b5f515dd29b34f5bc844e.png",
+        "ethereum_mainnet_address": null
+      },
+      {
+        "contract_decimals": 0,
+        "contract_name": null,
+        "contract_ticker_symbol": null,
+        "contract_address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "supports_erc": [
+          "erc20"
+        ],
+        "logo_url": "https://logos.covalenthq.com/tokens/30/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+        "ethereum_mainnet_address": ""
+      }
+    ],
+    "pagination": {
+      "has_more": null,
+      "page_number": 0,
+      "page_size": 100,
+      "total_count": null
+    }
+  },
+  "error": false,
+  "error_message": null,
+  "error_code": null
+}
