@@ -4,8 +4,9 @@ import com.ruho.rsk.domain.RskDto;
 import com.ruho.rsk.http.TransactionsFetcherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -16,7 +17,9 @@ public class RskTaxesApplication implements CommandLineRunner {
 	private TransactionsFetcherService transactionsFetcherService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(RskTaxesApplication.class, args);
+		new SpringApplicationBuilder(RskTaxesApplication.class)
+				.web(WebApplicationType.NONE)
+				.run(args);
 	}
 
 	@Override
