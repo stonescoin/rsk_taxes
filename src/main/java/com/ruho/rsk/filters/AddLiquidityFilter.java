@@ -4,7 +4,7 @@ import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
 import com.ruho.rsk.filters.reports.AddLiquidityReport;
 import com.ruho.rsk.steps.StepsFilter;
-import com.ruho.rsk.utils.ContractSpecs;
+import com.ruho.rsk.utils.PoolContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
 
 import java.math.BigDecimal;
@@ -18,18 +18,18 @@ import static com.ruho.rsk.steps.StepsFilter.*;
 public class AddLiquidityFilter implements AnyFilter {
     public AddLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);
-        return ContractSpecs.findSpecsFromContract(contractAddress)
-                .map(contractSpecs -> {
-                    BigDecimal baseAmount = getTransferAmount(transaction,  contractSpecs.getBaseSymbol());
-                    BigDecimal quoteAmount = getTransferAmount(transaction,  contractSpecs.getQuoteSymbol());
+        return PoolContractSpecs.findSpecsFromContract(contractAddress)
+                .map(poolContractSpecs -> {
+                    BigDecimal baseAmount = getTransferAmount(transaction, poolContractSpecs.getBaseSymbol());
+                    BigDecimal quoteAmount = getTransferAmount(transaction, poolContractSpecs.getQuoteSymbol());
 
                     return new AddLiquidityReport()
                             .setTransactionHash(transaction.getTransactionHash())
                             .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                             .setFees(transaction.getTotalFees())
-                            .setBaseSymbol(contractSpecs.getBaseSymbol())
+                            .setBaseSymbol(poolContractSpecs.getBaseSymbol())
                             .setBaseAmount(baseAmount)
-                            .setQuotedSymbol(contractSpecs.getQuoteSymbol())
+                            .setQuotedSymbol(poolContractSpecs.getQuoteSymbol())
                             .setQuotedAmount(quoteAmount);
                 }).orElseThrow(() ->
                     new IllegalStateException("contractSpecs not found for: " + contractAddress)

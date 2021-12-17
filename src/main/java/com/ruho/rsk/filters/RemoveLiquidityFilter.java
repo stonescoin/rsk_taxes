@@ -5,7 +5,7 @@ import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
 import com.ruho.rsk.filters.reports.RemoveLiquidityReport;
 import com.ruho.rsk.steps.StepsFilter;
-import com.ruho.rsk.utils.ContractSpecs;
+import com.ruho.rsk.utils.PoolContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
 
 import java.math.BigDecimal;
@@ -20,18 +20,18 @@ public class RemoveLiquidityFilter implements AnyFilter {
     @Override
     public RemoveLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);
-        return ContractSpecs.findSpecsFromContract(contractAddress)
-                .map(contractSpecs -> {
-                    BigDecimal baseAmount = getTransferAmount(transaction,  contractSpecs.getBaseSymbol());
-                    BigDecimal quoteAmount = getTransferAmount(transaction,  contractSpecs.getQuoteSymbol());
+        return PoolContractSpecs.findSpecsFromContract(contractAddress)
+                .map(poolContractSpecs -> {
+                    BigDecimal baseAmount = getTransferAmount(transaction, poolContractSpecs.getBaseSymbol());
+                    BigDecimal quoteAmount = getTransferAmount(transaction, poolContractSpecs.getQuoteSymbol());
                     return new RemoveLiquidityReport()
                             .setTransactionHash(transaction.getTransactionHash())
                             .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                             .setFees(transaction.getTotalFees())
                             .setSovsRewards(findRewardsAmount(transaction))
-                            .setBaseSymbol(contractSpecs.getBaseSymbol())
+                            .setBaseSymbol(poolContractSpecs.getBaseSymbol())
                             .setBaseAmount(baseAmount)
-                            .setQuotedSymbol(contractSpecs.getQuoteSymbol())
+                            .setQuotedSymbol(poolContractSpecs.getQuoteSymbol())
                             .setQuotedAmount(quoteAmount);
                 }).orElseThrow(() ->
                     new IllegalStateException("contractSpecs not found for: " + contractAddress)
@@ -65,7 +65,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
         RskLogEvent rewardsEvent = transferEvents.stream().findFirst()
                 .orElseThrow(() -> new IllegalStateException("can't find Transfer rewards event"));
         return findFirstParam(rewardsEvent, "value")
-                .map(RskDecodedData.Params::getValue)
+                .map(RskDecodedData.Param::getValue)
                 .map(number -> NumberParser.numberFrom(number, rewardsEvent.getSenderContractDecimals()))
                 .orElseThrow(() -> new IllegalStateException("value param not found for hash: " + rewardsEvent.getTransactionHash() + " offset: " + rewardsEvent.getLogOffset()));
     }

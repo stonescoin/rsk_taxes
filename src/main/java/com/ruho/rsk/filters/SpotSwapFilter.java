@@ -20,8 +20,8 @@ import com.ruho.rsk.domain.RskValueObject;
 import com.ruho.rsk.filters.reports.AnyReport;
 import com.ruho.rsk.filters.reports.SpotSwapReport;
 import com.ruho.rsk.steps.StepsFilter;
-import com.ruho.rsk.utils.ContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
+import com.ruho.rsk.utils.TokenContractSpecs;
 import org.springframework.util.StringUtils;
 
 import static com.google.common.base.Preconditions.checkArgument;
@@ -55,9 +55,9 @@ public class SpotSwapFilter implements AnyFilter {
                 .setTransactionHash(transaction.getTransactionHash())
                 .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                 .setFees(transaction.getTotalFees())
-                .setSourceSymbol(ContractSpecs.findSpecsFromContract(swapContracts.getSourceContract()).orElseThrow().getBaseSymbol())
+                .setSourceSymbol(TokenContractSpecs.findByAddress(swapContracts.getSourceContract()).getSymbol())
                 .setSourceAmount(sourceAmount)
-                .setTargetSymbol(ContractSpecs.findSpecsFromContract(swapContracts.getTargetContract()).orElseThrow().getBaseSymbol())
+                .setTargetSymbol(TokenContractSpecs.findByAddress(swapContracts.getTargetContract()).getSymbol())
                 .setTargetAmount(targetAmount);
     }
 
@@ -77,7 +77,7 @@ public class SpotSwapFilter implements AnyFilter {
         if (pathParam.getValue() instanceof ArrayList) {
             List<RskValueObject> addresses = gson.fromJson(pathParam.getValue().toString(), type);
             addresses = addresses.stream()
-                    .filter(rskValueObject -> ContractSpecs.tryFindContract(rskValueObject.getValue(), false))
+                    .filter(rskValueObject -> TokenContractSpecs.isValidContract(rskValueObject.getValue()))
                     .collect(Collectors.toList());
 
             String targetContract = addresses.stream()
