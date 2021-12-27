@@ -18,7 +18,7 @@ import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
 import com.ruho.rsk.domain.RskValueObject;
 import com.ruho.rsk.filters.reports.AnyReport;
-import com.ruho.rsk.filters.reports.SpotSwapReport;
+import com.ruho.rsk.filters.reports.SpotExternalSwapReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.NumberParser;
 import com.ruho.rsk.utils.TokenContractSpecs;
@@ -51,7 +51,7 @@ public class SpotSwapFilter implements AnyFilter {
         Integer targetDecimal = findContractDecimal(transaction, swapContracts.getSourceContract());
         BigDecimal targetAmount = extractAmount(paramList, TARGET_TOKEN_AMOUNT_NAME, targetDecimal);
 
-        return new SpotSwapReport()
+        return new SpotExternalSwapReport()
                 .setTransactionHash(transaction.getTransactionHash())
                 .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                 .setFees(transaction.getTotalFees())
@@ -68,7 +68,9 @@ public class SpotSwapFilter implements AnyFilter {
                 .filter(rskLogEvent -> rskLogEvent.getDecoded() != null)
                 .filter(rskLogEvent -> WITHDRAWAL.equals(rskLogEvent.getDecoded().getName()))
                 .collect(Collectors.toList());
+
         checkArgument(withdraws.size() > 0, "For spot withdrawal must exist. Tr_Hash: " + transaction.getTransactionHash());
+
         RskDecodedData.Param pathParam = paramList.stream()
                 .filter(param -> PATH_NAME.equals(param.getName()))
                 .findFirst()

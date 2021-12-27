@@ -6,6 +6,7 @@ import com.ruho.rsk.filters.AnyFilter;
 import com.ruho.rsk.filters.RemoveLiquidityFilter;
 import com.ruho.rsk.filters.SpotSwapFilter;
 import com.ruho.rsk.filters.reports.AnyReport;
+import com.ruho.rsk.filters.ExternalSwapFilter;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +17,8 @@ public class TransactionsParser {
     private final AnyFilter[] allFilters = new AnyFilter[]{
             new RemoveLiquidityFilter(),
             new AddLiquidityFilter(),
-            new SpotSwapFilter()
+            new SpotSwapFilter(),
+            new ExternalSwapFilter()
     };
 
     public List<AnyReport> parse(RskDto dto) {

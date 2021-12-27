@@ -78,4 +78,8 @@ public class StepsFilter {
         return isLogEventNamed(logEvent, SPOT_SWAP);
     }
 
+    public static boolean isExternalSwap(RskLogEvent logEvent) {
+        return isLogEventNamed(logEvent, EXTERNAL_SWAP);
+    }
+
 }
