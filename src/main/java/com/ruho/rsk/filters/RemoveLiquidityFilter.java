@@ -7,6 +7,7 @@ import com.ruho.rsk.filters.reports.RemoveLiquidityReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.PoolContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -16,6 +17,7 @@ import java.util.List;
 
 import static com.ruho.rsk.steps.StepsFilter.*;
 
+@Component
 public class RemoveLiquidityFilter implements AnyFilter {
     @Override
     public RemoveLiquidityReport generateReport(RskItem transaction) {
@@ -40,9 +42,7 @@ public class RemoveLiquidityFilter implements AnyFilter {
 
     private BigDecimal getTransferAmount(RskItem transaction, String symbol) {
         RskLogEvent transferEvent = findTransferEventBySymbol(transaction, symbol);
-        return findFirstParam(transferEvent, "value")
-                .map(param -> NumberParser.numberFrom(param.getValue(), transferEvent.getSenderContractDecimals()))
-                .orElseThrow(() -> new IllegalStateException("can't find value param in baseTransfer for " + transaction.getTransactionHash()));
+        return findAmountParam(transferEvent);
     }
 
     private RskLogEvent findTransferEventBySymbol(RskItem transaction, String symbol) {

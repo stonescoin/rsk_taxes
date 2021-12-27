@@ -1,30 +1,25 @@
 package com.ruho.rsk;
 
 import com.ruho.rsk.domain.RskDto;
-import com.ruho.rsk.filters.AddLiquidityFilter;
 import com.ruho.rsk.filters.AnyFilter;
-import com.ruho.rsk.filters.RemoveLiquidityFilter;
-import com.ruho.rsk.filters.SpotSwapFilter;
 import com.ruho.rsk.filters.reports.AnyReport;
-import com.ruho.rsk.filters.ExternalSwapFilter;
+import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class TransactionsParser {
+    private final List<AnyFilter> allFilters;
 
-    private final AnyFilter[] allFilters = new AnyFilter[]{
-            new RemoveLiquidityFilter(),
-            new AddLiquidityFilter(),
-            new SpotSwapFilter(),
-            new ExternalSwapFilter()
-    };
+    public TransactionsParser(List<AnyFilter> allFilters) {
+        this.allFilters = allFilters;
+    }
 
     public List<AnyReport> parse(RskDto dto) {
         return dto.getData().getItems().stream()
                 .flatMap(transaction ->
-                    Arrays.stream(allFilters)
+                        allFilters.stream()
                             .filter(anyFilter -> anyFilter.isTransactionInteresting(transaction))
                             .map(anyFilter -> anyFilter.generateReport(transaction))
                             .findFirst().stream()

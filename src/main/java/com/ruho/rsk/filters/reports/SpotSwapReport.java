@@ -1,13 +1,11 @@
 package com.ruho.rsk.filters.reports;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 import com.ruho.rsk.filters.TransactionType;
 
-public class SpotExternalSwapReport implements AnyReport {
+public class SpotSwapReport extends AbstractReport<SpotSwapReport> {
 
-    private String transactionHash;
 
     private String sourceSymbol;            // usdt ?
     private BigDecimal sourceAmount;
@@ -17,22 +15,11 @@ public class SpotExternalSwapReport implements AnyReport {
 
     private BigDecimal fees;    //always in BTC
 
-    private LocalDateTime time;
-
-    public String getTransactionHash() {
-        return transactionHash;
-    }
-
-    public SpotExternalSwapReport setTransactionHash(final String transactionHash) {
-        this.transactionHash = transactionHash;
-        return this;
-    }
-
     public String getSourceSymbol() {
         return sourceSymbol;
     }
 
-    public SpotExternalSwapReport setSourceSymbol(final String sourceSymbol) {
+    public SpotSwapReport setSourceSymbol(final String sourceSymbol) {
         this.sourceSymbol = sourceSymbol;
         return this;
     }
@@ -41,7 +28,7 @@ public class SpotExternalSwapReport implements AnyReport {
         return sourceAmount;
     }
 
-    public SpotExternalSwapReport setSourceAmount(final BigDecimal sourceAmount) {
+    public SpotSwapReport setSourceAmount(final BigDecimal sourceAmount) {
         this.sourceAmount = sourceAmount;
         return this;
     }
@@ -50,7 +37,7 @@ public class SpotExternalSwapReport implements AnyReport {
         return targetSymbol;
     }
 
-    public SpotExternalSwapReport setTargetSymbol(final String targetSymbol) {
+    public SpotSwapReport setTargetSymbol(final String targetSymbol) {
         this.targetSymbol = targetSymbol;
         return this;
     }
@@ -59,7 +46,7 @@ public class SpotExternalSwapReport implements AnyReport {
         return targetAmount;
     }
 
-    public SpotExternalSwapReport setTargetAmount(final BigDecimal targetAmount) {
+    public SpotSwapReport setTargetAmount(final BigDecimal targetAmount) {
         this.targetAmount = targetAmount;
         return this;
     }
@@ -68,17 +55,8 @@ public class SpotExternalSwapReport implements AnyReport {
         return fees;
     }
 
-    public SpotExternalSwapReport setFees(final BigDecimal fees) {
+    public SpotSwapReport setFees(final BigDecimal fees) {
         this.fees = fees;
-        return this;
-    }
-
-    public LocalDateTime getTime() {
-        return time;
-    }
-
-    public SpotExternalSwapReport setTime(final LocalDateTime time) {
-        this.time = time;
         return this;
     }
 
@@ -90,13 +68,11 @@ public class SpotExternalSwapReport implements AnyReport {
     @Override
     public String toString() {
         return "SpotSwapReport{" +
-                "transactionHash='" + transactionHash + '\'' +
-                ", sourceSymbol='" + sourceSymbol + '\'' +
+                "sourceSymbol='" + sourceSymbol + '\'' +
                 ", sourceAmount=" + sourceAmount +
                 ", targetSymbol='" + targetSymbol + '\'' +
                 ", targetAmount=" + targetAmount +
                 ", fees=" + fees +
-                ", time=" + time +
-                '}';
+                "} " + super.toString();
     }
 }

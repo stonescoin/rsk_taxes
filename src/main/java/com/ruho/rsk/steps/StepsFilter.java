@@ -3,9 +3,12 @@ package com.ruho.rsk.steps;
 import com.ruho.rsk.domain.RskDecodedData;
 import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
+import com.ruho.rsk.utils.NumberParser;
 import org.springframework.util.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -34,34 +37,49 @@ public class StepsFilter {
         return logEvent.getDecoded().getName().equals(REWARDS_CLAIMED);
     }
 
-    public static boolean isTransfer(RskLogEvent logEvent) {
-        return logEvent.getDecoded().getName().equals(TRANSFER);
+    private static boolean isTransfer(RskLogEvent logEvent) {
+        return logEvent.getDecoded() != null && TRANSFER.equals(logEvent.getDecoded().getName());
+    }
+
+    public static List<RskLogEvent> findTransferEvents(RskItem transaction) {
+        return transaction.getLogEvents().stream()
+                .filter(StepsFilter::isTransfer)
+                .collect(Collectors.toList());
     }
 
     public static List<RskLogEvent> findTransferEvents(RskItem transaction, String symbol) {
-        return transaction.getLogEvents().stream()
-                .filter(StepsFilter::isTransfer)
+        return findTransferEvents(transaction).stream()
                 .filter(logEvent -> logEvent.getSenderContract_ticker_symbol().contains(symbol))
                 .collect(Collectors.toList());
     }
 
     public static RskLogEvent findWithdrawEvent(RskItem transaction) {
-        return findFirstEvent(transaction, WITHDRAW);
+        return requireFirstEvent(transaction, WITHDRAW);
     }
 
     public static RskLogEvent findIssuanceEvent(RskItem transaction) {
-        return findFirstEvent(transaction, ISSUANCE);
+        return requireFirstEvent(transaction, ISSUANCE);
     }
 
     public static RskLogEvent findRewardsClaimedEvent(RskItem transaction) {
-        return findFirstEvent(transaction, REWARDS_CLAIMED);
+        return requireFirstEvent(transaction, REWARDS_CLAIMED);
     }
 
-    private static RskLogEvent findFirstEvent(RskItem transaction, String name) {
-        return transaction.getLogEvents().stream()
-                .filter(logEvent -> logEvent.getDecoded().getName().equals(name))
-                .findFirst()
+    public static RskLogEvent findTokensWithdrawnEvent(RskItem transaction) {
+        return requireFirstEvent(transaction, TOKENS_WITHDRAWN);
+    }
+
+    public static RskLogEvent requireFirstEvent(RskItem transaction, String name) {
+        return findFirstEvent(transaction, name)
                 .orElseThrow(() -> new IllegalStateException("no " + name + " event found for " + transaction.getTransactionHash()));
+    }
+
+    public static Optional<RskLogEvent> findFirstEvent(RskItem transaction, String name) {
+        Objects.requireNonNull(name, "name can't be null here for transaction hash: " + transaction.getTransactionHash());
+        return transaction.getLogEvents().stream()
+                .filter(logEvent -> logEvent.getDecoded() != null)
+                .filter(logEvent -> name.equals(logEvent.getDecoded().getName()))
+                .findFirst();
     }
 
     public static Optional<RskDecodedData.Param> findFirstParam(RskLogEvent event, String paramName) {
@@ -72,6 +90,12 @@ public class StepsFilter {
                     .filter(param -> param.getName().equals(paramName))
                     .findFirst();
         }
+    }
+
+    public static BigDecimal findAmountParam(RskLogEvent transferEvent) {
+        return findFirstParam(transferEvent, "value")
+                .map(param -> NumberParser.numberFrom(param.getValue(), transferEvent.getSenderContractDecimals()))
+                .orElseThrow(() -> new IllegalStateException("can't find value param in baseTransfer for " + transferEvent.getTransactionHash()));
     }
 
     public static boolean isSpotSwap(RskLogEvent logEvent) {

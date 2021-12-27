@@ -3,13 +3,10 @@ package com.ruho.rsk.filters.reports;
 import com.ruho.rsk.filters.TransactionType;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-public class RemoveLiquidityReport implements AnyReport {
+public class RemoveLiquidityReport extends AbstractReport<RemoveLiquidityReport> {
 
     private BigDecimal sovsRewards;
-
-    private String transactionHash;
 
     private String quotedSymbol;            // usdt ?
     private BigDecimal quotedAmount;
@@ -19,32 +16,12 @@ public class RemoveLiquidityReport implements AnyReport {
 
     private BigDecimal fees;    //always in BTC
 
-    private LocalDateTime time;
-
-    public LocalDateTime getTime() {
-        return time;
-    }
-
-    public RemoveLiquidityReport setTime(LocalDateTime time) {
-        this.time = time;
-        return this;
-    }
-
     public BigDecimal getSovsRewards() {
         return sovsRewards;
     }
 
     public RemoveLiquidityReport setSovsRewards(BigDecimal sovsRewards) {
         this.sovsRewards = sovsRewards;
-        return this;
-    }
-
-    public String getTransactionHash() {
-        return transactionHash;
-    }
-
-    public RemoveLiquidityReport setTransactionHash(String transactionHash) {
-        this.transactionHash = transactionHash;
         return this;
     }
 
@@ -102,12 +79,11 @@ public class RemoveLiquidityReport implements AnyReport {
     public String toString() {
         return "RemoveLiquidityReport{" +
                 "sovsRewards=" + sovsRewards +
-                ", transactionHash='" + transactionHash + '\'' +
                 ", quotedSymbol='" + quotedSymbol + '\'' +
                 ", quotedAmount=" + quotedAmount +
                 ", baseSymbol='" + baseSymbol + '\'' +
                 ", baseAmount=" + baseAmount +
                 ", fees=" + fees +
-                '}';
+                "} " + super.toString();
     }
 }

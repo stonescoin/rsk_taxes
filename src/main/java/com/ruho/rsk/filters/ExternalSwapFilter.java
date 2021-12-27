@@ -13,14 +13,16 @@ import com.ruho.rsk.domain.RskDecodedData;
 import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
 import com.ruho.rsk.filters.reports.AnyReport;
-import com.ruho.rsk.filters.reports.SpotExternalSwapReport;
+import com.ruho.rsk.filters.reports.SpotSwapReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.NumberParser;
 import com.ruho.rsk.utils.TokenContractSpecs;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import static com.ruho.rsk.steps.LogEventNames.TRANSFER;
 
+@Component
 public class ExternalSwapFilter implements AnyFilter {
 
     private final static String USER_CONTRACT_NAME = "user";
@@ -48,7 +50,7 @@ public class ExternalSwapFilter implements AnyFilter {
         Integer destinationDecimal = findContractDecimal(transaction, swapData.getDestinationContract());
         BigDecimal destinationAmount = NumberParser.numberFrom(swapData.getDestinationAmount(), destinationDecimal);
 
-        return new SpotExternalSwapReport()
+        return new SpotSwapReport()
                 .setTransactionHash(transaction.getTransactionHash())
                 .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                 .setFees(transaction.getTotalFees())

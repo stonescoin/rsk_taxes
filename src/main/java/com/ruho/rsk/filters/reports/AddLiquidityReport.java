@@ -5,7 +5,7 @@ import com.ruho.rsk.filters.TransactionType;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class AddLiquidityReport implements AnyReport {
+public class AddLiquidityReport extends AbstractReport<AddLiquidityReport> {
     private String transactionHash;
 
     private String quotedSymbol;            // usdt ?
@@ -92,7 +92,7 @@ public class AddLiquidityReport implements AnyReport {
                 ", baseAmount=" + baseAmount +
                 ", fees=" + fees +
                 ", time=" + time +
-                '}';
+                "} " + super.toString();
     }
 
     @Override

@@ -16,6 +16,9 @@ public class RskTaxesApplication implements CommandLineRunner {
 	@Autowired
 	private TransactionsFetcherService transactionsFetcherService;
 
+	@Autowired
+	private TransactionsParser transactionsParser;
+
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(RskTaxesApplication.class)
 				.web(WebApplicationType.NONE)
@@ -40,7 +43,7 @@ public class RskTaxesApplication implements CommandLineRunner {
 			} else {
 				rskDto = this.transactionsFetcherService.fetchTransactions(walletAddress, apiKey, pageNumber);
 			}
-			new TransactionsParser().parse(rskDto).forEach(report -> {
+			transactionsParser.parse(rskDto).forEach(report -> {
 				System.out.println(report);
 				System.out.println("------------------");
 			});

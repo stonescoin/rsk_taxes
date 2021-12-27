@@ -6,6 +6,7 @@ import com.ruho.rsk.filters.reports.AddLiquidityReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.PoolContractSpecs;
 import com.ruho.rsk.utils.NumberParser;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import static com.ruho.rsk.steps.StepsFilter.*;
 
+@Component
 public class AddLiquidityFilter implements AnyFilter {
     public AddLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);

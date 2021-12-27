@@ -18,15 +18,17 @@ import com.ruho.rsk.domain.RskItem;
 import com.ruho.rsk.domain.RskLogEvent;
 import com.ruho.rsk.domain.RskValueObject;
 import com.ruho.rsk.filters.reports.AnyReport;
-import com.ruho.rsk.filters.reports.SpotExternalSwapReport;
+import com.ruho.rsk.filters.reports.SpotSwapReport;
 import com.ruho.rsk.steps.StepsFilter;
 import com.ruho.rsk.utils.NumberParser;
 import com.ruho.rsk.utils.TokenContractSpecs;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.ruho.rsk.steps.LogEventNames.WITHDRAWAL;
 
+@Component
 public class SpotSwapFilter implements AnyFilter {
 
     private static final Type type = new TypeToken<List<RskValueObject>>(){}.getType();
@@ -51,7 +53,7 @@ public class SpotSwapFilter implements AnyFilter {
         Integer targetDecimal = findContractDecimal(transaction, swapContracts.getSourceContract());
         BigDecimal targetAmount = extractAmount(paramList, TARGET_TOKEN_AMOUNT_NAME, targetDecimal);
 
-        return new SpotExternalSwapReport()
+        return new SpotSwapReport()
                 .setTransactionHash(transaction.getTransactionHash())
                 .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
                 .setFees(transaction.getTotalFees())
