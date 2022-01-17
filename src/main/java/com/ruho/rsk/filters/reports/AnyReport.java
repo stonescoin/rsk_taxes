@@ -4,4 +4,6 @@ import com.ruho.rsk.filters.TransactionType;
 
 public interface AnyReport {
     TransactionType getTransactionType();
+
+    String getTransactionHash();
 }

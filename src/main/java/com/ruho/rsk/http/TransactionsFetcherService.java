@@ -2,6 +2,7 @@ package com.ruho.rsk.http;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ruho.rsk.domain.RskDto;
+import com.ruho.rsk.domain.RskInternalTransaction;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;

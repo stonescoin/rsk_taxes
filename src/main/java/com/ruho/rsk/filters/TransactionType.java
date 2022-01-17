@@ -5,4 +5,5 @@ public enum TransactionType {
     LIQUIDITY_REMOVE,
     SPOT_SWAP,
     EXTERNAL_SWAP,
+    DEPOSIT,
 }

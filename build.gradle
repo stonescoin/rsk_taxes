@@ -26,6 +26,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'com.google.code.gson:gson:2.8.9'
 	implementation 'com.google.guava:guava:31.0.1-jre'
+
+	implementation 'org.apache.commons:commons-csv:1.4'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

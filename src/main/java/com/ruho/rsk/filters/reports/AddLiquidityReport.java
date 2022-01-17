@@ -6,25 +6,23 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class AddLiquidityReport extends AbstractReport<AddLiquidityReport> {
-    private String transactionHash;
-
     private String quotedSymbol;            // usdt ?
     private BigDecimal quotedAmount;
 
     private String baseSymbol;              // btc ?
     private BigDecimal baseAmount;
 
+    private BigDecimal poolTokenAmount;
+
     private BigDecimal fees;    //always in BTC
 
-    private LocalDateTime time;
 
-
-    public String getTransactionHash() {
-        return transactionHash;
+    public BigDecimal getPoolTokenAmount() {
+        return poolTokenAmount;
     }
 
-    public AddLiquidityReport setTransactionHash(String transactionHash) {
-        this.transactionHash = transactionHash;
+    public AddLiquidityReport setPoolTokenAmount(BigDecimal poolTokenAmount) {
+        this.poolTokenAmount = poolTokenAmount;
         return this;
     }
 
@@ -73,25 +71,18 @@ public class AddLiquidityReport extends AbstractReport<AddLiquidityReport> {
         return this;
     }
 
-    public LocalDateTime getTime() {
-        return time;
-    }
-
-    public AddLiquidityReport setTime(LocalDateTime time) {
-        this.time = time;
-        return this;
+    public String getPoolTokenSymbol() {
+        return this.getBaseSymbol() + "-" + this.getQuotedSymbol() + "-LP";
     }
 
     @Override
     public String toString() {
         return "AddLiquidityReport{" +
-                "transactionHash='" + transactionHash + '\'' +
                 ", quotedSymbol='" + quotedSymbol + '\'' +
                 ", quotedAmount=" + quotedAmount +
                 ", baseSymbol='" + baseSymbol + '\'' +
                 ", baseAmount=" + baseAmount +
                 ", fees=" + fees +
-                ", time=" + time +
                 "} " + super.toString();
     }
 

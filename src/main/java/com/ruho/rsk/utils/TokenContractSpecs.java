@@ -7,8 +7,11 @@ import java.util.Arrays;
  */
 public enum TokenContractSpecs {
     SOV("0xefc78fc7d48b64958315949279ba181c2114abbd", "SOV"),
+    MYNT("0x2e6b1d146064613e8f521eb3c6e65070af964ebb", "MYNT"),
     BTC("0x542fda317318ebf1d3deaf76e0b632741a7e677d", "BTC"),
     USD("0xb5999795be0ebb5bab23144aa5fd6a02d080299f", "USD"),
+    FISH("0x055a902303746382fbb7d18f6ae0df56efdc5213", "FISH"),
+    BNB("0x6d9659bdf5b1a1da217f7bbaf7dbaf8190e2e71b", "BNB"),
     ETH("0x1d931bf8656d795e50ef6d639562c5bd8ac2b78f", "ETH");
 
     private final String address;

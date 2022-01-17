@@ -126,9 +126,7 @@ public class ExternalSwapFilter implements AnyFilter {
             this.sourceContract = sourceContract;
             this.sourceAmount = sourceAmount;
             this.destinationContract = destinationContract;
-            this
-
-                    .destinationAmount = destinationAmount;
+            this.destinationAmount = destinationAmount;
         }
 
         public String getUserContract() {

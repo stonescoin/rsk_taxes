@@ -69,6 +69,14 @@ public class StepsFilter {
         return requireFirstEvent(transaction, TOKENS_WITHDRAWN);
     }
 
+    public static RskLogEvent findLiquidityAddedEvent(RskItem transaction) {
+        return requireFirstEvent(transaction, LIQUIDITY_ADDED_V1);
+    }
+
+    public static RskLogEvent findLiquidityRemovedEvent(RskItem transaction) {
+        return requireFirstEvent(transaction, LIQUIDITY_REMOVED_V1);
+    }
+
     public static RskLogEvent requireFirstEvent(RskItem transaction, String name) {
         return findFirstEvent(transaction, name)
                 .orElseThrow(() -> new IllegalStateException("no " + name + " event found for " + transaction.getTransactionHash()));
@@ -92,10 +100,22 @@ public class StepsFilter {
         }
     }
 
-    public static BigDecimal findAmountParam(RskLogEvent transferEvent) {
-        return findFirstParam(transferEvent, "value")
-                .map(param -> NumberParser.numberFrom(param.getValue(), transferEvent.getSenderContractDecimals()))
-                .orElseThrow(() -> new IllegalStateException("can't find value param in baseTransfer for " + transferEvent.getTransactionHash()));
+    public static BigDecimal findAmountParam(RskLogEvent event) {
+        return findAmountParam(event, "value");
+    }
+
+    public static BigDecimal findAmountParam(RskLogEvent event, String paramName) {
+        return findFirstParam(event, paramName)
+                .map(param -> NumberParser.numberFrom(param.getValue(), event.getSenderContractDecimals()))
+                .orElseThrow(() -> new IllegalStateException("can't find value param in baseTransfer for " + event.getTransactionHash()));
+    }
+
+    public static boolean isMinted(RskLogEvent logEvent) {
+        return isLogEventNamed(logEvent, MINTED);
+    }
+
+    public static boolean isExecuted(RskLogEvent logEvent) {
+        return isLogEventNamed(logEvent, EXECUTED);
     }
 
     public static boolean isSpotSwap(RskLogEvent logEvent) {
@@ -106,4 +126,7 @@ public class StepsFilter {
         return isLogEventNamed(logEvent, EXTERNAL_SWAP);
     }
 
+    public static boolean isConversionSwap(RskLogEvent logEvent) {
+        return isLogEventNamed(logEvent, CONVERSION);
+    }
 }

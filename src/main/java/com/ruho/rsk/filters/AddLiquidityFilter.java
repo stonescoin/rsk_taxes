@@ -20,11 +20,12 @@ import static com.ruho.rsk.steps.StepsFilter.*;
 public class AddLiquidityFilter implements AnyFilter {
     public AddLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);
+        RskLogEvent liquidityAddedEvent = findLiquidityAddedEvent(transaction);
+        BigDecimal poolTokensAmount = findAmountParam(liquidityAddedEvent, "_poolTokenAmount");
         return PoolContractSpecs.findSpecsFromContract(contractAddress)
                 .map(poolContractSpecs -> {
                     BigDecimal baseAmount = getTransferAmount(transaction, poolContractSpecs.getBaseSymbol());
                     BigDecimal quoteAmount = getTransferAmount(transaction, poolContractSpecs.getQuoteSymbol());
-
                     return new AddLiquidityReport()
                             .setTransactionHash(transaction.getTransactionHash())
                             .setTime(LocalDateTime.ofInstant(transaction.getBlockSignedAt().toInstant(), ZoneOffset.UTC))
@@ -32,7 +33,8 @@ public class AddLiquidityFilter implements AnyFilter {
                             .setBaseSymbol(poolContractSpecs.getBaseSymbol())
                             .setBaseAmount(baseAmount)
                             .setQuotedSymbol(poolContractSpecs.getQuoteSymbol())
-                            .setQuotedAmount(quoteAmount);
+                            .setQuotedAmount(quoteAmount)
+                            .setPoolTokenAmount(poolTokensAmount);
                 }).orElseThrow(() ->
                     new IllegalStateException("contractSpecs not found for: " + contractAddress)
                 );

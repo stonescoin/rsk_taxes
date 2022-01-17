@@ -6,6 +6,7 @@ public abstract class AbstractReport<SELF extends AbstractReport<? extends AnyRe
     private String transactionHash;
     private LocalDateTime time;
 
+    @Override
     public String getTransactionHash() {
         return transactionHash;
     }

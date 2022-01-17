@@ -22,6 +22,8 @@ public class RemoveLiquidityFilter implements AnyFilter {
     @Override
     public RemoveLiquidityReport generateReport(RskItem transaction) {
         String contractAddress = findContractAddress(transaction);
+        RskLogEvent liquidityAddedEvent = findLiquidityRemovedEvent(transaction);
+        BigDecimal poolTokensAmount = findAmountParam(liquidityAddedEvent, "_poolTokenAmount");
         return PoolContractSpecs.findSpecsFromContract(contractAddress)
                 .map(poolContractSpecs -> {
                     BigDecimal baseAmount = getTransferAmount(transaction, poolContractSpecs.getBaseSymbol());
@@ -34,7 +36,8 @@ public class RemoveLiquidityFilter implements AnyFilter {
                             .setBaseSymbol(poolContractSpecs.getBaseSymbol())
                             .setBaseAmount(baseAmount)
                             .setQuotedSymbol(poolContractSpecs.getQuoteSymbol())
-                            .setQuotedAmount(quoteAmount);
+                            .setQuotedAmount(quoteAmount)
+                            .setPoolTokenAmount(poolTokensAmount);
                 }).orElseThrow(() ->
                     new IllegalStateException("contractSpecs not found for: " + contractAddress)
                 );
