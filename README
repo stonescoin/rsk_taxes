@@ -16,5 +16,11 @@ the second one your wallet address starting with 0x
           and store the output in such files. Increment the last argument number, until in the response you get
           data.pagination.has-more == false
 
+status: it is detecting spot conversions, add and remove liquidity, and vesting withdrawal. But deposits are nott
+visible via covalenthq api... I was able to implement a quick solution, run it with --classpath as described above,
+but export your internal transactions from rsk explorer to classpath:/resources/transactions/<wallet_addr>-internal.json
+then the program will be able to detect deposits from there.
+When you run it, it will generate a file in <project>/ctc_report.csv which you can import in cryptotaxcalculator.io
+
 
 
