@@ -16,6 +16,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.net.URL;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -110,11 +111,12 @@ public class RskTaxesApplication implements CommandLineRunner {
 	}
 
 	public RskInternalTransaction[] internalTransactions(String walletAddr) throws IOException {
-		String filePathInternal = Objects.requireNonNull(
-				TransactionsParser.class.getClassLoader().getResource(String.format("transactions/%s-internal.json", walletAddr))
-		).getFile();
+		URL resource = TransactionsParser.class.getClassLoader().getResource(String.format("transactions/%s-internal.json", walletAddr));
+		if (resource == null) {
+			return new RskInternalTransaction[0];
+		}
 		ObjectMapper mapper = new ObjectMapper();
-		try (Reader readerInternal = new FileReader(filePathInternal)) {
+		try (Reader readerInternal = new FileReader(resource.getFile())) {
 			return mapper.readValue(readerInternal, RskInternalTransaction[].class);
 		}
 	}
